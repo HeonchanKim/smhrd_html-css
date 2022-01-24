@@ -5,49 +5,126 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>회원가입</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <style>
+        body{
+            background-color: #3e5ea1; font-family: 'Noto Sans KR', sans-serif;
+        }
+        h1{text-align: center; color: white;margin-top: 50px;}
+        form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: rgb(2, 2, 2);
+        }
+        table{width: 400px;}
+        tr{background-color: #4763a0;}
+        td{padding: 7px;}
+        select{padding: 5px;}
+        input[type=submit], input[type=reset]{
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 10%;
+            background-color: #2B406E;
+            color: white;
+            cursor: pointer;
+        }
+        table{
+            border: 0px solid;
+        }
 
+
+        .left{text-align: left;}
+        .right{text-align: right;}
+        .top{height: 60px; background-color: #2B406E; color: white;}
+        input{
+            background: #ffffff;
+            border: none;
+            padding: 5px;
+        }
+        .last{background-color: transparent;}
     </style>
 </head>
 <body>
-    
+    <h1>회원가입</h1>
     <form action="">
-        <table border="1">
-            <tr align="left">
+        <table>
+            <tr class="left top">
                 <th colspan="2">Step1 : 아이디/비번 입력</th>
             </tr>
             <tr>
-                <td align="right">아이디 :</td>
-                <td><input type="text"></td>
+                <td class="right">아이디 :</td>
+                <td><input type="text" placeholder="ID를 입력해주세요"></td>
             </tr>
             <tr>
-                <td align="right">비밀번호 :</td>
-                <td><input type="password"></td>
+                <td class="right">비밀번호 :</td>
+                <td><input type="password" placeholder="PW를 입력해주세요"></td>
             </tr>
             <tr>
-                <td align="right">비밀번호 확인:</td>
-                <td><input type="password"></td>
+                <td class="right">비밀번호 확인:</td>
+                <td><input type="password" placeholder="PW를 다시 입력해주세요"></td>
             </tr>
             <!-- -------------------------------------------- -->
-            <tr>
+            <tr class="left top">
                 <th colspan="2">Step2 : 개인정보</th>
             </tr>
             <tr>
-                <td align="right">성별 :</td>
-                <td><input type="text"></td>
+                <td class="right">성별 :</td>
+                <td>
+                    남 <input type="radio" name="gender">
+                    여 <input type="radio" name="gender" checked>
+                </td>
             </tr>
             <tr>
-                <td align="right">혈액형 :</td>
-                <td><input type="password"></td>
+                <td class="right">혈액형 :</td>
+                <td>
+                    <select>
+                        <option value="A">A형</option>
+                        <option value="B">B형</option>
+                        <option value="O">O형</option>
+                        <option value="AB">AB형</option>
+                    </select>
+                </td>
             </tr>
             <tr>
-                <td align="right">생일 :</td>
-                <td><input type="password"></td>
+                <td class="right">생일 :</td>
+                <td><input type="date"></td>
             </tr>
             <!-- -------------------------------------------- -->
+            <tr class="left top">
+                <th colspan="2">Step3 : 선호도</th>
+            </tr>
+            <tr>
+                <td class="right">취미 :</td>
+                <td>
+                    축구 <input type="checkbox" name="hobby">
+                    야구 <input type="checkbox" name="hobby">
+                    농구 <input type="checkbox" name="hobby">
+                </td>
+            </tr>
+            <tr>
+                <td class="right">좋아하는 색깔 :</td>
+                <td><input type="color"></td>
+            </tr>
+            <!-- -------------------------------------------- -->
+            <tr class="left top">
+                <th colspan="2">Step4 : 적고 싶은 말</th>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <textarea  cols="52" rows="5" placeholder="자유롭게 적어주세요"></textarea>
+                </td>
+            </tr>
+            <!-- -------------------------------------------- -->
+            <tr class="last">
+                <th colspan="2">
+                    <input type="submit">
+                    <input type="reset">
+                </th>
+            </tr>
         </table>
     </form>
-
-
 </body>
 </html>
