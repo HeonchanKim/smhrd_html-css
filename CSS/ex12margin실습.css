@@ -1,0 +1,22 @@
+body{margin: 0;}
+div{width: 100px; height: 100px;}
+#div1{
+    background-color: rgb(107, 142, 35);
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 70%;
+}
+#div2{
+    background-color: rgb(133, 172, 55);
+    margin-left: 100px;
+}
+#div3{
+    background-color: rgb(161, 194, 96);
+    margin-left: 200px;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+}
+
+#div4{
+    background-color: rgb(187, 221, 120);
+    margin-left: 300px;
+}
